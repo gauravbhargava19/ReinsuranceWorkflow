@@ -6,12 +6,82 @@ package com.myspace.reinsuranceworkflow;
 
 public class OccupationDetails implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public OccupationDetails() {
-    }
+	@org.kie.api.definition.type.Label(value = "Employer Name")
+	private java.lang.String employerName;
+	@org.kie.api.definition.type.Label(value = "Start Date")
+	private java.util.Date startDate;
+	@org.kie.api.definition.type.Label(value = "End Date")
+	private java.util.Date endDate;
+	@org.kie.api.definition.type.Label(value = "Designation")
+	private java.lang.String designation;
+	@org.kie.api.definition.type.Label(value = "Monthly Salary")
+	private java.lang.Double monthlySalary;
+	@org.kie.api.definition.type.Label(value = "Annual Salary")
+	private java.lang.Double annualSalary;
 
+	public OccupationDetails() {
+	}
 
+	public java.lang.String getEmployerName() {
+		return this.employerName;
+	}
 
+	public void setEmployerName(java.lang.String employerName) {
+		this.employerName = employerName;
+	}
+
+	public java.util.Date getStartDate() {
+		return this.startDate;
+	}
+
+	public void setStartDate(java.util.Date startDate) {
+		this.startDate = startDate;
+	}
+
+	public java.util.Date getEndDate() {
+		return this.endDate;
+	}
+
+	public void setEndDate(java.util.Date endDate) {
+		this.endDate = endDate;
+	}
+
+	public java.lang.String getDesignation() {
+		return this.designation;
+	}
+
+	public void setDesignation(java.lang.String designation) {
+		this.designation = designation;
+	}
+
+	public java.lang.Double getMonthlySalary() {
+		return this.monthlySalary;
+	}
+
+	public void setMonthlySalary(java.lang.Double monthlySalary) {
+		this.monthlySalary = monthlySalary;
+	}
+
+	public java.lang.Double getAnnualSalary() {
+		return this.annualSalary;
+	}
+
+	public void setAnnualSalary(java.lang.Double annualSalary) {
+		this.annualSalary = annualSalary;
+	}
+
+	public OccupationDetails(java.lang.String employerName,
+			java.util.Date startDate, java.util.Date endDate,
+			java.lang.String designation, java.lang.Double monthlySalary,
+			java.lang.Double annualSalary) {
+		this.employerName = employerName;
+		this.startDate = startDate;
+		this.endDate = endDate;
+		this.designation = designation;
+		this.monthlySalary = monthlySalary;
+		this.annualSalary = annualSalary;
+	}
 
 }
