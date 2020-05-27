@@ -6,12 +6,162 @@ package com.myspace.reinsuranceworkflow;
 
 public class PersonalDetails implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public PersonalDetails() {
-    }
+	@org.kie.api.definition.type.Label(value = "Salutation")
+	private java.lang.String salutation;
+	@org.kie.api.definition.type.Label(value = "First Name")
+	private java.lang.String firstName;
+	@org.kie.api.definition.type.Label(value = "Middle Name")
+	private java.lang.String middleName;
+	@org.kie.api.definition.type.Label(value = "Last Name")
+	private java.lang.String lastName;
+	@org.kie.api.definition.type.Label(value = "Date of Birth")
+	private java.util.Date dob;
+	@org.kie.api.definition.type.Label(value = "PAN Number")
+	private java.lang.String panNumber;
+	@org.kie.api.definition.type.Label(value = "Marital Status")
+	private java.lang.String maritalStatus;
+	@org.kie.api.definition.type.Label(value = "Nationality")
+	private java.lang.String nationality;
+	@org.kie.api.definition.type.Label(value = "Aadhar Number")
+	private java.lang.String aadhar;
+	@org.kie.api.definition.type.Label(value = "Gender")
+	private java.lang.String gender;
+	@org.kie.api.definition.type.Label(value = "Facultative SUC")
+	private java.lang.Double facultativeSUC;
+	@org.kie.api.definition.type.Label(value = "Financial SUC")
+	private java.lang.Double finSUC;
+	@org.kie.api.definition.type.Label(value = "Medical SUC")
+	private java.lang.Double medSUC;
 
+	public PersonalDetails() {
+	}
 
+	public java.lang.String getSalutation() {
+		return this.salutation;
+	}
 
+	public void setSalutation(java.lang.String salutation) {
+		this.salutation = salutation;
+	}
+
+	public java.lang.String getFirstName() {
+		return this.firstName;
+	}
+
+	public void setFirstName(java.lang.String firstName) {
+		this.firstName = firstName;
+	}
+
+	public java.lang.String getMiddleName() {
+		return this.middleName;
+	}
+
+	public void setMiddleName(java.lang.String middleName) {
+		this.middleName = middleName;
+	}
+
+	public java.lang.String getLastName() {
+		return this.lastName;
+	}
+
+	public void setLastName(java.lang.String lastName) {
+		this.lastName = lastName;
+	}
+
+	public java.util.Date getDob() {
+		return this.dob;
+	}
+
+	public void setDob(java.util.Date dob) {
+		this.dob = dob;
+	}
+
+	public java.lang.String getPanNumber() {
+		return this.panNumber;
+	}
+
+	public void setPanNumber(java.lang.String panNumber) {
+		this.panNumber = panNumber;
+	}
+
+	public java.lang.String getMaritalStatus() {
+		return this.maritalStatus;
+	}
+
+	public void setMaritalStatus(java.lang.String maritalStatus) {
+		this.maritalStatus = maritalStatus;
+	}
+
+	public java.lang.String getNationality() {
+		return this.nationality;
+	}
+
+	public void setNationality(java.lang.String nationality) {
+		this.nationality = nationality;
+	}
+
+	public java.lang.String getAadhar() {
+		return this.aadhar;
+	}
+
+	public void setAadhar(java.lang.String aadhar) {
+		this.aadhar = aadhar;
+	}
+
+	public java.lang.String getGender() {
+		return this.gender;
+	}
+
+	public void setGender(java.lang.String gender) {
+		this.gender = gender;
+	}
+
+	public java.lang.Double getFacultativeSUC() {
+		return this.facultativeSUC;
+	}
+
+	public void setFacultativeSUC(java.lang.Double facultativeSUC) {
+		this.facultativeSUC = facultativeSUC;
+	}
+
+	public java.lang.Double getFinSUC() {
+		return this.finSUC;
+	}
+
+	public void setFinSUC(java.lang.Double finSUC) {
+		this.finSUC = finSUC;
+	}
+
+	public java.lang.Double getMedSUC() {
+		return this.medSUC;
+	}
+
+	public void setMedSUC(java.lang.Double medSUC) {
+		this.medSUC = medSUC;
+	}
+
+	public PersonalDetails(java.lang.String salutation,
+			java.lang.String firstName, java.lang.String middleName,
+			java.lang.String lastName, java.util.Date dob,
+			java.lang.String panNumber, java.lang.String maritalStatus,
+			java.lang.String nationality, java.lang.String aadhar,
+			java.lang.String gender, java.lang.Double facultativeSUC,
+			java.lang.Double finSUC, java.lang.Double medSUC) {
+		this.salutation = salutation;
+		this.firstName = firstName;
+		this.middleName = middleName;
+		this.lastName = lastName;
+		this.dob = dob;
+		this.panNumber = panNumber;
+		this.maritalStatus = maritalStatus;
+		this.nationality = nationality;
+		this.aadhar = aadhar;
+		this.gender = gender;
+		this.facultativeSUC = facultativeSUC;
+		this.finSUC = finSUC;
+		this.medSUC = medSUC;
+	}
 
 }
