@@ -6,12 +6,105 @@ package com.myspace.reinsuranceworkflow;
 
 public class PolicyDetails implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public PolicyDetails() {
-    }
+	@org.kie.api.definition.type.Label(value = "Policy Number")
+	private java.lang.String policyNumer;
+	@org.kie.api.definition.type.Label(value = "Application Number")
+	private java.lang.String applicationNumber;
+	@org.kie.api.definition.type.Label(value = "Product Name")
+	private java.lang.String productName;
+	@org.kie.api.definition.type.Label(value = "Policy Term")
+	private java.lang.Integer policyTerm;
+	@org.kie.api.definition.type.Label(value = "Sum Assured")
+	private java.lang.Double sumAssured;
+	@org.kie.api.definition.type.Label(value = "Base Premium")
+	private java.lang.Double basePremium;
+	@org.kie.api.definition.type.Label(value = "Total Premium")
+	private java.lang.Double totalPremium;
+	@org.kie.api.definition.type.Label(value = "Premium Paying Term")
+	private java.lang.Integer premiumPayingTerm;
 
+	public PolicyDetails() {
+	}
 
+	public java.lang.String getPolicyNumer() {
+		return this.policyNumer;
+	}
 
+	public void setPolicyNumer(java.lang.String policyNumer) {
+		this.policyNumer = policyNumer;
+	}
+
+	public java.lang.String getApplicationNumber() {
+		return this.applicationNumber;
+	}
+
+	public void setApplicationNumber(java.lang.String applicationNumber) {
+		this.applicationNumber = applicationNumber;
+	}
+
+	public java.lang.String getProductName() {
+		return this.productName;
+	}
+
+	public void setProductName(java.lang.String productName) {
+		this.productName = productName;
+	}
+
+	public java.lang.Integer getPolicyTerm() {
+		return this.policyTerm;
+	}
+
+	public void setPolicyTerm(java.lang.Integer policyTerm) {
+		this.policyTerm = policyTerm;
+	}
+
+	public java.lang.Double getSumAssured() {
+		return this.sumAssured;
+	}
+
+	public void setSumAssured(java.lang.Double sumAssured) {
+		this.sumAssured = sumAssured;
+	}
+
+	public java.lang.Double getBasePremium() {
+		return this.basePremium;
+	}
+
+	public void setBasePremium(java.lang.Double basePremium) {
+		this.basePremium = basePremium;
+	}
+
+	public java.lang.Double getTotalPremium() {
+		return this.totalPremium;
+	}
+
+	public void setTotalPremium(java.lang.Double totalPremium) {
+		this.totalPremium = totalPremium;
+	}
+
+	public java.lang.Integer getPremiumPayingTerm() {
+		return this.premiumPayingTerm;
+	}
+
+	public void setPremiumPayingTerm(java.lang.Integer premiumPayingTerm) {
+		this.premiumPayingTerm = premiumPayingTerm;
+	}
+
+	public PolicyDetails(java.lang.String policyNumer,
+			java.lang.String applicationNumber, java.lang.String productName,
+			java.lang.Integer policyTerm, java.lang.Double sumAssured,
+			java.lang.Double basePremium, java.lang.Double totalPremium,
+			java.lang.Integer premiumPayingTerm) {
+		this.policyNumer = policyNumer;
+		this.applicationNumber = applicationNumber;
+		this.productName = productName;
+		this.policyTerm = policyTerm;
+		this.sumAssured = sumAssured;
+		this.basePremium = basePremium;
+		this.totalPremium = totalPremium;
+		this.premiumPayingTerm = premiumPayingTerm;
+	}
 
 }
