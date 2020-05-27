@@ -6,12 +6,93 @@ package com.myspace.reinsuranceworkflow;
 
 public class AddressDetails implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public AddressDetails() {
-    }
+	@org.kie.api.definition.type.Label(value = "Address Line 1")
+	private java.lang.String addressLine1;
+	@org.kie.api.definition.type.Label(value = "Address Line 2")
+	private java.lang.String addressLine2;
+	@org.kie.api.definition.type.Label(value = "Street")
+	private java.lang.String street;
+	@org.kie.api.definition.type.Label(value = "City")
+	private java.lang.String city;
+	@org.kie.api.definition.type.Label(value = "State")
+	private java.lang.String state;
+	@org.kie.api.definition.type.Label(value = "Country")
+	private java.lang.String country;
+	@org.kie.api.definition.type.Label(value = "Pin Code")
+	private java.lang.Integer pinCode;
 
+	public AddressDetails() {
+	}
 
+	public java.lang.String getAddressLine1() {
+		return this.addressLine1;
+	}
 
+	public void setAddressLine1(java.lang.String addressLine1) {
+		this.addressLine1 = addressLine1;
+	}
+
+	public java.lang.String getAddressLine2() {
+		return this.addressLine2;
+	}
+
+	public void setAddressLine2(java.lang.String addressLine2) {
+		this.addressLine2 = addressLine2;
+	}
+
+	public java.lang.String getStreet() {
+		return this.street;
+	}
+
+	public void setStreet(java.lang.String street) {
+		this.street = street;
+	}
+
+	public java.lang.String getCity() {
+		return this.city;
+	}
+
+	public void setCity(java.lang.String city) {
+		this.city = city;
+	}
+
+	public java.lang.String getState() {
+		return this.state;
+	}
+
+	public void setState(java.lang.String state) {
+		this.state = state;
+	}
+
+	public java.lang.String getCountry() {
+		return this.country;
+	}
+
+	public void setCountry(java.lang.String country) {
+		this.country = country;
+	}
+
+	public java.lang.Integer getPinCode() {
+		return this.pinCode;
+	}
+
+	public void setPinCode(java.lang.Integer pinCode) {
+		this.pinCode = pinCode;
+	}
+
+	public AddressDetails(java.lang.String addressLine1,
+			java.lang.String addressLine2, java.lang.String street,
+			java.lang.String city, java.lang.String state,
+			java.lang.String country, java.lang.Integer pinCode) {
+		this.addressLine1 = addressLine1;
+		this.addressLine2 = addressLine2;
+		this.street = street;
+		this.city = city;
+		this.state = state;
+		this.country = country;
+		this.pinCode = pinCode;
+	}
 
 }
