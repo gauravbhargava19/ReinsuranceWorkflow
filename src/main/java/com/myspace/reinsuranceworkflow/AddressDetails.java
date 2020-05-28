@@ -8,20 +8,26 @@ public class AddressDetails implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
-	@org.kie.api.definition.type.Label(value = "Address Line 1")
+	@org.kie.api.definition.type.Label("Address Line 1")
 	private java.lang.String addressLine1;
-	@org.kie.api.definition.type.Label(value = "Address Line 2")
+	@org.kie.api.definition.type.Label("Address Line 2")
 	private java.lang.String addressLine2;
-	@org.kie.api.definition.type.Label(value = "Street")
+	@org.kie.api.definition.type.Label("Street")
 	private java.lang.String street;
-	@org.kie.api.definition.type.Label(value = "City")
+	@org.kie.api.definition.type.Label("City")
 	private java.lang.String city;
-	@org.kie.api.definition.type.Label(value = "State")
+	@org.kie.api.definition.type.Label("State")
 	private java.lang.String state;
-	@org.kie.api.definition.type.Label(value = "Country")
+	@org.kie.api.definition.type.Label("Country")
 	private java.lang.String country;
-	@org.kie.api.definition.type.Label(value = "Pin Code")
+	@org.kie.api.definition.type.Label("Pin Code")
 	private java.lang.Integer pinCode;
+
+	@org.kie.api.definition.type.Label(value = "Address ID")
+	private java.lang.String addressId;
+
+	@org.kie.api.definition.type.Label(value = "Address Type")
+	private java.lang.String addressType;
 
 	public AddressDetails() {
 	}
@@ -82,10 +88,27 @@ public class AddressDetails implements java.io.Serializable {
 		this.pinCode = pinCode;
 	}
 
+	public java.lang.String getAddressId() {
+		return this.addressId;
+	}
+
+	public void setAddressId(java.lang.String addressId) {
+		this.addressId = addressId;
+	}
+
+	public java.lang.String getAddressType() {
+		return this.addressType;
+	}
+
+	public void setAddressType(java.lang.String addressType) {
+		this.addressType = addressType;
+	}
+
 	public AddressDetails(java.lang.String addressLine1,
 			java.lang.String addressLine2, java.lang.String street,
 			java.lang.String city, java.lang.String state,
-			java.lang.String country, java.lang.Integer pinCode) {
+			java.lang.String country, java.lang.Integer pinCode,
+			java.lang.String addressId, java.lang.String addressType) {
 		this.addressLine1 = addressLine1;
 		this.addressLine2 = addressLine2;
 		this.street = street;
@@ -93,6 +116,8 @@ public class AddressDetails implements java.io.Serializable {
 		this.state = state;
 		this.country = country;
 		this.pinCode = pinCode;
+		this.addressId = addressId;
+		this.addressType = addressType;
 	}
 
 }
