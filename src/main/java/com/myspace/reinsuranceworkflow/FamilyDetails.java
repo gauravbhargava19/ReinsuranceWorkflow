@@ -8,18 +8,21 @@ public class FamilyDetails implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
-	@org.kie.api.definition.type.Label(value = "Member ID")
+	@org.kie.api.definition.type.Label("Member ID")
 	private java.lang.String memberId;
-	@org.kie.api.definition.type.Label(value = "Name")
+	@org.kie.api.definition.type.Label("Name")
 	private java.lang.String name;
-	@org.kie.api.definition.type.Label(value = "Relation")
+	@org.kie.api.definition.type.Label("Relation")
 	private java.lang.String relation;
-	@org.kie.api.definition.type.Label(value = "Gender")
+	@org.kie.api.definition.type.Label("Gender")
 	private java.lang.String gender;
-	@org.kie.api.definition.type.Label(value = "Date of Birth")
+	@org.kie.api.definition.type.Label("Date of Birth")
 	private java.util.Date dob;
-	@org.kie.api.definition.type.Label(value = "Medical Details")
+	@org.kie.api.definition.type.Label("Medical Details")
 	private java.util.List<com.myspace.reinsuranceworkflow.MedicalDetails> medicalDetails;
+
+	@org.kie.api.definition.type.Label(value = "Family Name")
+	private java.lang.String familyName;
 
 	public FamilyDetails() {
 	}
@@ -73,19 +76,29 @@ public class FamilyDetails implements java.io.Serializable {
 		this.medicalDetails = medicalDetails;
 	}
 
+	public java.lang.String getFamilyName() {
+		return this.familyName;
+	}
+
+	public void setFamilyName(java.lang.String familyName) {
+		this.familyName = familyName;
+	}
+
 	public FamilyDetails(
 			java.lang.String memberId,
 			java.lang.String name,
 			java.lang.String relation,
 			java.lang.String gender,
 			java.util.Date dob,
-			java.util.List<com.myspace.reinsuranceworkflow.MedicalDetails> medicalDetails) {
+			java.util.List<com.myspace.reinsuranceworkflow.MedicalDetails> medicalDetails,
+			java.lang.String familyName) {
 		this.memberId = memberId;
 		this.name = name;
 		this.relation = relation;
 		this.gender = gender;
 		this.dob = dob;
 		this.medicalDetails = medicalDetails;
+		this.familyName = familyName;
 	}
 
 }
