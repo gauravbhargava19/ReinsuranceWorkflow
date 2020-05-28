@@ -6,12 +6,86 @@ package com.myspace.reinsuranceworkflow;
 
 public class FamilyDetails implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public FamilyDetails() {
-    }
+	@org.kie.api.definition.type.Label(value = "Member ID")
+	private java.lang.String memberId;
+	@org.kie.api.definition.type.Label(value = "Name")
+	private java.lang.String name;
+	@org.kie.api.definition.type.Label(value = "Relation")
+	private java.lang.String relation;
+	@org.kie.api.definition.type.Label(value = "Gender")
+	private java.lang.String gender;
+	@org.kie.api.definition.type.Label(value = "Date of Birth")
+	private java.util.Date dob;
+	@org.kie.api.definition.type.Label(value = "Medical Details")
+	private java.util.List<com.myspace.reinsuranceworkflow.MedicalDetails> medicalDetails;
 
+	public FamilyDetails() {
+	}
 
+	public java.lang.String getMemberId() {
+		return this.memberId;
+	}
 
+	public void setMemberId(java.lang.String memberId) {
+		this.memberId = memberId;
+	}
+
+	public java.lang.String getName() {
+		return this.name;
+	}
+
+	public void setName(java.lang.String name) {
+		this.name = name;
+	}
+
+	public java.lang.String getRelation() {
+		return this.relation;
+	}
+
+	public void setRelation(java.lang.String relation) {
+		this.relation = relation;
+	}
+
+	public java.lang.String getGender() {
+		return this.gender;
+	}
+
+	public void setGender(java.lang.String gender) {
+		this.gender = gender;
+	}
+
+	public java.util.Date getDob() {
+		return this.dob;
+	}
+
+	public void setDob(java.util.Date dob) {
+		this.dob = dob;
+	}
+
+	public java.util.List<com.myspace.reinsuranceworkflow.MedicalDetails> getMedicalDetails() {
+		return this.medicalDetails;
+	}
+
+	public void setMedicalDetails(
+			java.util.List<com.myspace.reinsuranceworkflow.MedicalDetails> medicalDetails) {
+		this.medicalDetails = medicalDetails;
+	}
+
+	public FamilyDetails(
+			java.lang.String memberId,
+			java.lang.String name,
+			java.lang.String relation,
+			java.lang.String gender,
+			java.util.Date dob,
+			java.util.List<com.myspace.reinsuranceworkflow.MedicalDetails> medicalDetails) {
+		this.memberId = memberId;
+		this.name = name;
+		this.relation = relation;
+		this.gender = gender;
+		this.dob = dob;
+		this.medicalDetails = medicalDetails;
+	}
 
 }
