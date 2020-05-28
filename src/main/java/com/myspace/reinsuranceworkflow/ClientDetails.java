@@ -6,12 +6,115 @@ package com.myspace.reinsuranceworkflow;
 
 public class ClientDetails implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public ClientDetails() {
-    }
+	@org.kie.api.definition.type.Label(value = "Client Type")
+	private java.lang.String clientType;
+	@org.kie.api.definition.type.Label(value = "Client ID")
+	private java.lang.String clientId;
+	@org.kie.api.definition.type.Label(value = "Personal Details")
+	private com.myspace.reinsuranceworkflow.PersonalDetails personalDetails;
+	@org.kie.api.definition.type.Label(value = "Medical Test Details")
+	private java.util.List<com.myspace.reinsuranceworkflow.MedicalDetails> medicalTestDetails;
+	@org.kie.api.definition.type.Label(value = "Occupation Details")
+	private java.util.List<com.myspace.reinsuranceworkflow.OccupationDetails> occupationDetails;
+	@org.kie.api.definition.type.Label(value = "Medical Questionnaire")
+	private java.util.List<com.myspace.reinsuranceworkflow.MedicalQuestionnaire> medicalQuestionnaire;
+	@org.kie.api.definition.type.Label(value = "Address Details")
+	private java.util.List<com.myspace.reinsuranceworkflow.AddressDetails> addressDetails;
+	@org.kie.api.definition.type.Label(value = "Family Details")
+	private java.util.List<com.myspace.reinsuranceworkflow.FamilyDetails> familyDetails;
 
+	public ClientDetails() {
+	}
 
+	public java.lang.String getClientType() {
+		return this.clientType;
+	}
 
+	public void setClientType(java.lang.String clientType) {
+		this.clientType = clientType;
+	}
+
+	public java.lang.String getClientId() {
+		return this.clientId;
+	}
+
+	public void setClientId(java.lang.String clientId) {
+		this.clientId = clientId;
+	}
+
+	public com.myspace.reinsuranceworkflow.PersonalDetails getPersonalDetails() {
+		return this.personalDetails;
+	}
+
+	public void setPersonalDetails(
+			com.myspace.reinsuranceworkflow.PersonalDetails personalDetails) {
+		this.personalDetails = personalDetails;
+	}
+
+	public java.util.List<com.myspace.reinsuranceworkflow.MedicalDetails> getMedicalTestDetails() {
+		return this.medicalTestDetails;
+	}
+
+	public void setMedicalTestDetails(
+			java.util.List<com.myspace.reinsuranceworkflow.MedicalDetails> medicalTestDetails) {
+		this.medicalTestDetails = medicalTestDetails;
+	}
+
+	public java.util.List<com.myspace.reinsuranceworkflow.OccupationDetails> getOccupationDetails() {
+		return this.occupationDetails;
+	}
+
+	public void setOccupationDetails(
+			java.util.List<com.myspace.reinsuranceworkflow.OccupationDetails> occupationDetails) {
+		this.occupationDetails = occupationDetails;
+	}
+
+	public java.util.List<com.myspace.reinsuranceworkflow.MedicalQuestionnaire> getMedicalQuestionnaire() {
+		return this.medicalQuestionnaire;
+	}
+
+	public void setMedicalQuestionnaire(
+			java.util.List<com.myspace.reinsuranceworkflow.MedicalQuestionnaire> medicalQuestionnaire) {
+		this.medicalQuestionnaire = medicalQuestionnaire;
+	}
+
+	public java.util.List<com.myspace.reinsuranceworkflow.AddressDetails> getAddressDetails() {
+		return this.addressDetails;
+	}
+
+	public void setAddressDetails(
+			java.util.List<com.myspace.reinsuranceworkflow.AddressDetails> addressDetails) {
+		this.addressDetails = addressDetails;
+	}
+
+	public java.util.List<com.myspace.reinsuranceworkflow.FamilyDetails> getFamilyDetails() {
+		return this.familyDetails;
+	}
+
+	public void setFamilyDetails(
+			java.util.List<com.myspace.reinsuranceworkflow.FamilyDetails> familyDetails) {
+		this.familyDetails = familyDetails;
+	}
+
+	public ClientDetails(
+			java.lang.String clientType,
+			java.lang.String clientId,
+			com.myspace.reinsuranceworkflow.PersonalDetails personalDetails,
+			java.util.List<com.myspace.reinsuranceworkflow.MedicalDetails> medicalTestDetails,
+			java.util.List<com.myspace.reinsuranceworkflow.OccupationDetails> occupationDetails,
+			java.util.List<com.myspace.reinsuranceworkflow.MedicalQuestionnaire> medicalQuestionnaire,
+			java.util.List<com.myspace.reinsuranceworkflow.AddressDetails> addressDetails,
+			java.util.List<com.myspace.reinsuranceworkflow.FamilyDetails> familyDetails) {
+		this.clientType = clientType;
+		this.clientId = clientId;
+		this.personalDetails = personalDetails;
+		this.medicalTestDetails = medicalTestDetails;
+		this.occupationDetails = occupationDetails;
+		this.medicalQuestionnaire = medicalQuestionnaire;
+		this.addressDetails = addressDetails;
+		this.familyDetails = familyDetails;
+	}
 
 }
