@@ -8,32 +8,35 @@ public class PersonalDetails implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
-	@org.kie.api.definition.type.Label(value = "Salutation")
+	@org.kie.api.definition.type.Label("Salutation")
 	private java.lang.String salutation;
-	@org.kie.api.definition.type.Label(value = "First Name")
+	@org.kie.api.definition.type.Label("First Name")
 	private java.lang.String firstName;
-	@org.kie.api.definition.type.Label(value = "Middle Name")
+	@org.kie.api.definition.type.Label("Middle Name")
 	private java.lang.String middleName;
-	@org.kie.api.definition.type.Label(value = "Last Name")
+	@org.kie.api.definition.type.Label("Last Name")
 	private java.lang.String lastName;
-	@org.kie.api.definition.type.Label(value = "Date of Birth")
+	@org.kie.api.definition.type.Label("Date of Birth")
 	private java.util.Date dob;
-	@org.kie.api.definition.type.Label(value = "PAN Number")
+	@org.kie.api.definition.type.Label("PAN Number")
 	private java.lang.String panNumber;
-	@org.kie.api.definition.type.Label(value = "Marital Status")
+	@org.kie.api.definition.type.Label("Marital Status")
 	private java.lang.String maritalStatus;
-	@org.kie.api.definition.type.Label(value = "Nationality")
+	@org.kie.api.definition.type.Label("Nationality")
 	private java.lang.String nationality;
-	@org.kie.api.definition.type.Label(value = "Aadhar Number")
+	@org.kie.api.definition.type.Label("Aadhar Number")
 	private java.lang.String aadhar;
-	@org.kie.api.definition.type.Label(value = "Gender")
+	@org.kie.api.definition.type.Label("Gender")
 	private java.lang.String gender;
-	@org.kie.api.definition.type.Label(value = "Facultative SUC")
+	@org.kie.api.definition.type.Label("Facultative SUC")
 	private java.lang.Double facultativeSUC;
-	@org.kie.api.definition.type.Label(value = "Financial SUC")
+	@org.kie.api.definition.type.Label("Financial SUC")
 	private java.lang.Double finSUC;
-	@org.kie.api.definition.type.Label(value = "Medical SUC")
+	@org.kie.api.definition.type.Label("Medical SUC")
 	private java.lang.Double medSUC;
+
+	@org.kie.api.definition.type.Label(value = "Occupation")
+	private java.lang.String occupation;
 
 	public PersonalDetails() {
 	}
@@ -142,13 +145,22 @@ public class PersonalDetails implements java.io.Serializable {
 		this.medSUC = medSUC;
 	}
 
+	public java.lang.String getOccupation() {
+		return this.occupation;
+	}
+
+	public void setOccupation(java.lang.String occupation) {
+		this.occupation = occupation;
+	}
+
 	public PersonalDetails(java.lang.String salutation,
 			java.lang.String firstName, java.lang.String middleName,
 			java.lang.String lastName, java.util.Date dob,
 			java.lang.String panNumber, java.lang.String maritalStatus,
 			java.lang.String nationality, java.lang.String aadhar,
 			java.lang.String gender, java.lang.Double facultativeSUC,
-			java.lang.Double finSUC, java.lang.Double medSUC) {
+			java.lang.Double finSUC, java.lang.Double medSUC,
+			java.lang.String occupation) {
 		this.salutation = salutation;
 		this.firstName = firstName;
 		this.middleName = middleName;
@@ -162,6 +174,7 @@ public class PersonalDetails implements java.io.Serializable {
 		this.facultativeSUC = facultativeSUC;
 		this.finSUC = finSUC;
 		this.medSUC = medSUC;
+		this.occupation = occupation;
 	}
 
 }
