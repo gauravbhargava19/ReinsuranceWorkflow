@@ -6,12 +6,93 @@ package com.myspace.reinsuranceworkflow;
 
 public class RiderDetails implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public RiderDetails() {
-    }
+	@org.kie.api.definition.type.Label(value = "Product Name")
+	private java.lang.String productName;
+	@org.kie.api.definition.type.Label(value = "Product Code")
+	private java.lang.String productCode;
+	@org.kie.api.definition.type.Label(value = "Policy Term")
+	private java.lang.Integer policyTerm;
+	@org.kie.api.definition.type.Label(value = "Premium Paying Term")
+	private java.lang.Integer premiumPayingTerm;
+	@org.kie.api.definition.type.Label(value = "Product Type")
+	private java.lang.String productType;
+	@org.kie.api.definition.type.Label(value = "Premium Amount")
+	private java.lang.Double premiumAmount;
+	@org.kie.api.definition.type.Label(value = "Sum Assured")
+	private java.lang.Double sumAssured;
 
+	public RiderDetails() {
+	}
 
+	public java.lang.String getProductName() {
+		return this.productName;
+	}
 
+	public void setProductName(java.lang.String productName) {
+		this.productName = productName;
+	}
+
+	public java.lang.String getProductCode() {
+		return this.productCode;
+	}
+
+	public void setProductCode(java.lang.String productCode) {
+		this.productCode = productCode;
+	}
+
+	public java.lang.Integer getPolicyTerm() {
+		return this.policyTerm;
+	}
+
+	public void setPolicyTerm(java.lang.Integer policyTerm) {
+		this.policyTerm = policyTerm;
+	}
+
+	public java.lang.Integer getPremiumPayingTerm() {
+		return this.premiumPayingTerm;
+	}
+
+	public void setPremiumPayingTerm(java.lang.Integer premiumPayingTerm) {
+		this.premiumPayingTerm = premiumPayingTerm;
+	}
+
+	public java.lang.String getProductType() {
+		return this.productType;
+	}
+
+	public void setProductType(java.lang.String productType) {
+		this.productType = productType;
+	}
+
+	public java.lang.Double getPremiumAmount() {
+		return this.premiumAmount;
+	}
+
+	public void setPremiumAmount(java.lang.Double premiumAmount) {
+		this.premiumAmount = premiumAmount;
+	}
+
+	public java.lang.Double getSumAssured() {
+		return this.sumAssured;
+	}
+
+	public void setSumAssured(java.lang.Double sumAssured) {
+		this.sumAssured = sumAssured;
+	}
+
+	public RiderDetails(java.lang.String productName,
+			java.lang.String productCode, java.lang.Integer policyTerm,
+			java.lang.Integer premiumPayingTerm, java.lang.String productType,
+			java.lang.Double premiumAmount, java.lang.Double sumAssured) {
+		this.productName = productName;
+		this.productCode = productCode;
+		this.policyTerm = policyTerm;
+		this.premiumPayingTerm = premiumPayingTerm;
+		this.productType = productType;
+		this.premiumAmount = premiumAmount;
+		this.sumAssured = sumAssured;
+	}
 
 }
