@@ -6,12 +6,36 @@ package com.myspace.reinsuranceworkflow;
 
 public class NomineeDetails implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public NomineeDetails() {
-    }
+	@org.kie.api.definition.type.Label(value = "Nominee")
+	private com.myspace.reinsuranceworkflow.Nominee nominee;
+	@org.kie.api.definition.type.Label(value = "Appointee")
+	private com.myspace.reinsuranceworkflow.Appointee appointee;
 
+	public NomineeDetails() {
+	}
 
+	public com.myspace.reinsuranceworkflow.Nominee getNominee() {
+		return this.nominee;
+	}
 
+	public void setNominee(com.myspace.reinsuranceworkflow.Nominee nominee) {
+		this.nominee = nominee;
+	}
+
+	public com.myspace.reinsuranceworkflow.Appointee getAppointee() {
+		return this.appointee;
+	}
+
+	public void setAppointee(com.myspace.reinsuranceworkflow.Appointee appointee) {
+		this.appointee = appointee;
+	}
+
+	public NomineeDetails(com.myspace.reinsuranceworkflow.Nominee nominee,
+			com.myspace.reinsuranceworkflow.Appointee appointee) {
+		this.nominee = nominee;
+		this.appointee = appointee;
+	}
 
 }
