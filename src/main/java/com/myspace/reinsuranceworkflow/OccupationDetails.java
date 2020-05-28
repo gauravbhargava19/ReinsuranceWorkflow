@@ -8,18 +8,21 @@ public class OccupationDetails implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
-	@org.kie.api.definition.type.Label(value = "Employer Name")
+	@org.kie.api.definition.type.Label("Employer Name")
 	private java.lang.String employerName;
-	@org.kie.api.definition.type.Label(value = "Start Date")
+	@org.kie.api.definition.type.Label("Start Date")
 	private java.util.Date startDate;
-	@org.kie.api.definition.type.Label(value = "End Date")
+	@org.kie.api.definition.type.Label("End Date")
 	private java.util.Date endDate;
-	@org.kie.api.definition.type.Label(value = "Designation")
+	@org.kie.api.definition.type.Label("Designation")
 	private java.lang.String designation;
-	@org.kie.api.definition.type.Label(value = "Monthly Salary")
+	@org.kie.api.definition.type.Label("Monthly Salary")
 	private java.lang.Double monthlySalary;
-	@org.kie.api.definition.type.Label(value = "Annual Salary")
+	@org.kie.api.definition.type.Label("Annual Salary")
 	private java.lang.Double annualSalary;
+
+	@org.kie.api.definition.type.Label(value = "Occupation Code")
+	private java.lang.String occupationCode;
 
 	public OccupationDetails() {
 	}
@@ -72,16 +75,25 @@ public class OccupationDetails implements java.io.Serializable {
 		this.annualSalary = annualSalary;
 	}
 
+	public java.lang.String getOccupationCode() {
+		return this.occupationCode;
+	}
+
+	public void setOccupationCode(java.lang.String occupationCode) {
+		this.occupationCode = occupationCode;
+	}
+
 	public OccupationDetails(java.lang.String employerName,
 			java.util.Date startDate, java.util.Date endDate,
 			java.lang.String designation, java.lang.Double monthlySalary,
-			java.lang.Double annualSalary) {
+			java.lang.Double annualSalary, java.lang.String occupationCode) {
 		this.employerName = employerName;
 		this.startDate = startDate;
 		this.endDate = endDate;
 		this.designation = designation;
 		this.monthlySalary = monthlySalary;
 		this.annualSalary = annualSalary;
+		this.occupationCode = occupationCode;
 	}
 
 }
