@@ -6,12 +6,59 @@ package com.myspace.reinsuranceworkflow;
 
 public class MedicalQuestionnaire implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public MedicalQuestionnaire() {
-    }
+	@org.kie.api.definition.type.Label(value = "Question Id")
+	private java.lang.String quesId;
+	@org.kie.api.definition.type.Label(value = "Question Description")
+	private java.lang.String quesDesc;
+	@org.kie.api.definition.type.Label(value = "Answer to the Question")
+	private java.lang.String quesAns;
+	@org.kie.api.definition.type.Label(value = "comments")
+	private java.lang.String comments;
 
+	public MedicalQuestionnaire() {
+	}
 
+	public java.lang.String getQuesId() {
+		return this.quesId;
+	}
 
+	public void setQuesId(java.lang.String quesId) {
+		this.quesId = quesId;
+	}
+
+	public java.lang.String getQuesDesc() {
+		return this.quesDesc;
+	}
+
+	public void setQuesDesc(java.lang.String quesDesc) {
+		this.quesDesc = quesDesc;
+	}
+
+	public java.lang.String getQuesAns() {
+		return this.quesAns;
+	}
+
+	public void setQuesAns(java.lang.String quesAns) {
+		this.quesAns = quesAns;
+	}
+
+	public java.lang.String getComments() {
+		return this.comments;
+	}
+
+	public void setComments(java.lang.String comments) {
+		this.comments = comments;
+	}
+
+	public MedicalQuestionnaire(java.lang.String quesId,
+			java.lang.String quesDesc, java.lang.String quesAns,
+			java.lang.String comments) {
+		this.quesId = quesId;
+		this.quesDesc = quesDesc;
+		this.quesAns = quesAns;
+		this.comments = comments;
+	}
 
 }
