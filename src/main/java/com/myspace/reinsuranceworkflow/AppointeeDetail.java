@@ -6,12 +6,58 @@ package com.myspace.reinsuranceworkflow;
 
 public class AppointeeDetail implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public AppointeeDetail() {
-    }
+	@org.kie.api.definition.type.Label(value = "Appointee Name")
+	private java.lang.String appointeeName;
+	@org.kie.api.definition.type.Label(value = "Date of Birth")
+	private java.util.Date dob;
+	@org.kie.api.definition.type.Label(value = "Relationship with Nominee")
+	private java.lang.String relationshipNominee;
+	@org.kie.api.definition.type.Label(value = "Gender")
+	private java.lang.String gender;
 
+	public AppointeeDetail() {
+	}
 
+	public java.lang.String getAppointeeName() {
+		return this.appointeeName;
+	}
 
+	public void setAppointeeName(java.lang.String appointeeName) {
+		this.appointeeName = appointeeName;
+	}
+
+	public java.util.Date getDob() {
+		return this.dob;
+	}
+
+	public void setDob(java.util.Date dob) {
+		this.dob = dob;
+	}
+
+	public java.lang.String getRelationshipNominee() {
+		return this.relationshipNominee;
+	}
+
+	public void setRelationshipNominee(java.lang.String relationshipNominee) {
+		this.relationshipNominee = relationshipNominee;
+	}
+
+	public java.lang.String getGender() {
+		return this.gender;
+	}
+
+	public void setGender(java.lang.String gender) {
+		this.gender = gender;
+	}
+
+	public AppointeeDetail(java.lang.String appointeeName, java.util.Date dob,
+			java.lang.String relationshipNominee, java.lang.String gender) {
+		this.appointeeName = appointeeName;
+		this.dob = dob;
+		this.relationshipNominee = relationshipNominee;
+		this.gender = gender;
+	}
 
 }
