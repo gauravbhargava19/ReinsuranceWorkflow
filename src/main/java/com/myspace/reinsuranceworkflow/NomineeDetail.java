@@ -19,9 +19,6 @@ public class NomineeDetail implements java.io.Serializable {
 	@org.kie.api.definition.type.Label("Gender")
 	private java.lang.String gender;
 
-	@org.kie.api.definition.type.Label(value = "Name")
-	private java.lang.String name;
-
 	public NomineeDetail() {
 	}
 
@@ -65,23 +62,14 @@ public class NomineeDetail implements java.io.Serializable {
 		this.gender = gender;
 	}
 
-	public java.lang.String getName() {
-		return this.name;
-	}
-
-	public void setName(java.lang.String name) {
-		this.name = name;
-	}
-
 	public NomineeDetail(java.lang.String nomineeName, java.util.Date dob,
 			java.lang.String relationship, java.lang.Double percentShare,
-			java.lang.String gender, java.lang.String name) {
+			java.lang.String gender) {
 		this.nomineeName = nomineeName;
 		this.dob = dob;
 		this.relationship = relationship;
 		this.percentShare = percentShare;
 		this.gender = gender;
-		this.name = name;
 	}
 
 }
