@@ -8,22 +8,34 @@ public class PolicyDetails implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
-	@org.kie.api.definition.type.Label(value = "Policy Number")
+	@org.kie.api.definition.type.Label("Policy Number")
 	private java.lang.String policyNumer;
-	@org.kie.api.definition.type.Label(value = "Application Number")
+	@org.kie.api.definition.type.Label("Application Number")
 	private java.lang.String applicationNumber;
-	@org.kie.api.definition.type.Label(value = "Product Name")
+	@org.kie.api.definition.type.Label("Product Name")
 	private java.lang.String productName;
-	@org.kie.api.definition.type.Label(value = "Policy Term")
+	@org.kie.api.definition.type.Label("Policy Term")
 	private java.lang.Integer policyTerm;
-	@org.kie.api.definition.type.Label(value = "Sum Assured")
+	@org.kie.api.definition.type.Label("Sum Assured")
 	private java.lang.Double sumAssured;
-	@org.kie.api.definition.type.Label(value = "Base Premium")
+	@org.kie.api.definition.type.Label("Base Premium")
 	private java.lang.Double basePremium;
-	@org.kie.api.definition.type.Label(value = "Total Premium")
+	@org.kie.api.definition.type.Label("Total Premium")
 	private java.lang.Double totalPremium;
-	@org.kie.api.definition.type.Label(value = "Premium Paying Term")
+	@org.kie.api.definition.type.Label("Premium Paying Term")
 	private java.lang.Integer premiumPayingTerm;
+
+	@org.kie.api.definition.type.Label(value = "Client Details")
+	private java.util.List<com.myspace.reinsuranceworkflow.ClientDetails> clientDetails;
+
+	@org.kie.api.definition.type.Label(value = "Nominee Details")
+	private java.util.List<com.myspace.reinsuranceworkflow.NomineeDetails> nomineeDetails;
+
+	@org.kie.api.definition.type.Label(value = "Product Details")
+	private com.myspace.reinsuranceworkflow.RiderDetails productDetails;
+
+	@org.kie.api.definition.type.Label(value = "Reinsurer Policy Decision")
+	private com.myspace.reinsuranceworkflow.ReinsurerDecision reinsurerPolicyDecision;
 
 	public PolicyDetails() {
 	}
@@ -92,11 +104,55 @@ public class PolicyDetails implements java.io.Serializable {
 		this.premiumPayingTerm = premiumPayingTerm;
 	}
 
-	public PolicyDetails(java.lang.String policyNumer,
-			java.lang.String applicationNumber, java.lang.String productName,
-			java.lang.Integer policyTerm, java.lang.Double sumAssured,
-			java.lang.Double basePremium, java.lang.Double totalPremium,
-			java.lang.Integer premiumPayingTerm) {
+	public java.util.List<com.myspace.reinsuranceworkflow.ClientDetails> getClientDetails() {
+		return this.clientDetails;
+	}
+
+	public void setClientDetails(
+			java.util.List<com.myspace.reinsuranceworkflow.ClientDetails> clientDetails) {
+		this.clientDetails = clientDetails;
+	}
+
+	public java.util.List<com.myspace.reinsuranceworkflow.NomineeDetails> getNomineeDetails() {
+		return this.nomineeDetails;
+	}
+
+	public void setNomineeDetails(
+			java.util.List<com.myspace.reinsuranceworkflow.NomineeDetails> nomineeDetails) {
+		this.nomineeDetails = nomineeDetails;
+	}
+
+	public com.myspace.reinsuranceworkflow.RiderDetails getProductDetails() {
+		return this.productDetails;
+	}
+
+	public void setProductDetails(
+			com.myspace.reinsuranceworkflow.RiderDetails productDetails) {
+		this.productDetails = productDetails;
+	}
+
+	public com.myspace.reinsuranceworkflow.ReinsurerDecision getReinsurerPolicyDecision() {
+		return this.reinsurerPolicyDecision;
+	}
+
+	public void setReinsurerPolicyDecision(
+			com.myspace.reinsuranceworkflow.ReinsurerDecision reinsurerPolicyDecision) {
+		this.reinsurerPolicyDecision = reinsurerPolicyDecision;
+	}
+
+	public PolicyDetails(
+			java.lang.String policyNumer,
+			java.lang.String applicationNumber,
+			java.lang.String productName,
+			java.lang.Integer policyTerm,
+			java.lang.Double sumAssured,
+			java.lang.Double basePremium,
+			java.lang.Double totalPremium,
+			java.lang.Integer premiumPayingTerm,
+			java.util.List<com.myspace.reinsuranceworkflow.ClientDetails> clientDetails,
+			java.util.List<com.myspace.reinsuranceworkflow.NomineeDetails> nomineeDetails,
+			com.myspace.reinsuranceworkflow.RiderDetails productDetails,
+			com.myspace.reinsuranceworkflow.ReinsurerDecision reinsurerPolicyDecision) {
 		this.policyNumer = policyNumer;
 		this.applicationNumber = applicationNumber;
 		this.productName = productName;
@@ -105,6 +161,10 @@ public class PolicyDetails implements java.io.Serializable {
 		this.basePremium = basePremium;
 		this.totalPremium = totalPremium;
 		this.premiumPayingTerm = premiumPayingTerm;
+		this.clientDetails = clientDetails;
+		this.nomineeDetails = nomineeDetails;
+		this.productDetails = productDetails;
+		this.reinsurerPolicyDecision = reinsurerPolicyDecision;
 	}
 
 }
