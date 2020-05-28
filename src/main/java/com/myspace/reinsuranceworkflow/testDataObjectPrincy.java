@@ -6,12 +6,23 @@ package com.myspace.reinsuranceworkflow;
 
 public class testDataObjectPrincy implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public testDataObjectPrincy() {
-    }
+	private java.lang.String customerName;
 
+	public testDataObjectPrincy() {
+	}
 
+	public java.lang.String getCustomerName() {
+		return this.customerName;
+	}
 
+	public void setCustomerName(java.lang.String customerName) {
+		this.customerName = customerName;
+	}
+
+	public testDataObjectPrincy(java.lang.String customerName) {
+		this.customerName = customerName;
+	}
 
 }
